@@ -34,17 +34,17 @@ export default function IRouter(){
         <HashRouter>
             <App>
                 <Switch>
-                    {/* <Route path="/login" component={Login}></Route>
+                    <Route path="/login" component={Login}></Route>
                     <Route path="/common" render={() => 
                       <Common>
                           <Route path="/common/order/detail/:orderId" exact component={OrderDetail} />
                       </Common> 
-                    }/> */}
+                    }/>
                     <Route path="/" render={() => 
                       <Admin>
                           <Switch>
                             <Route path="/home" component={Home}></Route>
-                            {/* <Route path="/ui/buttons" component={Buttons}></Route>
+                            <Route path="/ui/buttons" component={Buttons}></Route>
                             <Route path="/ui/modals" component={Modals}></Route>
                             <Route path="/ui/loadings" component={Loadings}></Route>
                             <Route path="/ui/notification" component={Notice}></Route>
@@ -64,7 +64,7 @@ export default function IRouter(){
                             <Route path="/charts/bar" component={Bar}></Route>
                             <Route path="/charts/pie" component={Pie}></Route>
                             <Route path="/charts/line" component={Line}></Route>
-                            <Route path="/permission" component={Permission}></Route> */}
+                            <Route path="/permission" component={Permission}></Route>
                             <Redirect to="/home" />
                             <Route component={NoMatch}></Route>
                           </Switch>
