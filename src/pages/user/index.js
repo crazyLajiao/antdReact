@@ -1,10 +1,19 @@
 import React from 'react'
-import {Card, Button, Form, Input, Select,Radio, Icon, Modal, DatePicker} from 'antd'
+import {Card, Button, Form, Input, Select,Radio,  Modal, DatePicker} from 'antd'
 import axios from './../../axios'
 import Utils from './../../utils/utils'
 import BaseForm from './../../components/BaseForm'
 import ETable from './../../components/ETable'
 import moment from 'moment'
+import {
+    EditOutlined,
+    PlusOutlined,
+    DeleteOutlined,
+    SearchOutlined,
+    DownloadOutlined,
+    LeftOutlined,
+    RightOutlined,
+  } from '@ant-design/icons';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 const TextArea = Input.TextArea;
@@ -204,10 +213,10 @@ export default class User extends React.Component{
                     <BaseForm formList={this.formList} filterSubmit={this.handleFilter}/>
                 </Card>
                 <Card style={{marginTop:10}} className="operate-wrap">
-                    <Button type="primary" icon="plus" onClick={() => this.handleOperate('create')}>创建员工</Button>
-                    <Button type="primary" icon="edit" onClick={() => this.handleOperate('edit')}>编辑员工</Button>
+                    <Button type="primary" icon={<PlusOutlined/>} onClick={() => this.handleOperate('create')}>创建员工</Button>
+                    <Button type="primary" icon={<EditOutlined/>} onClick={() => this.handleOperate('edit')}>编辑员工</Button>
                     <Button type="primary" onClick={() => this.handleOperate('detail')}>员工详情</Button>
-                    <Button type="primary" icon="delete" onClick={() => this.handleOperate('delete')}>删除员工</Button>
+                    <Button type="primary" icon={<DeleteOutlined/>} onClick={() => this.handleOperate('delete')}>删除员工</Button>
                 </Card>
                 <div className="content-wrap">
                     <ETable

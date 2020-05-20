@@ -43,6 +43,7 @@ export default class Axios{
         let loading;
         if(options.data && options.data.isShowLoading !== false){
             loading = document.getElementById('ajaxLoading');
+            console.log(loading)
             loading.style.display = 'block';
         }
         let baseApi = 'https://www.easy-mock.com/mock/5c2c7c1b580d6209d1e2aa88/mockapi'
