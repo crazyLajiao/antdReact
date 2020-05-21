@@ -9,10 +9,7 @@ import {
     EditOutlined,
     PlusOutlined,
     DeleteOutlined,
-    SearchOutlined,
-    DownloadOutlined,
-    LeftOutlined,
-    RightOutlined,
+    
   } from '@ant-design/icons';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;

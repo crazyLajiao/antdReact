@@ -4,14 +4,14 @@ import Utils from '../../utils/utils'
 const FormItem = Form.Item;
 
 class FilterForm extends React.Component{
-    
+    formRef = React.createRef();
     handleFilterSubmit = () => {
-        let fieldsValue = this.props.form.getFieldsValue();
+        let fieldsValue = this.formRef.current.getFieldsValue();
         this.props.filterSubmit(fieldsValue);
     }
 
     reset = () => {
-        this.props.form.resetFields();
+        this.formRef.current.resetFields();
     }
 
     initFormList = () => {
@@ -77,7 +77,7 @@ class FilterForm extends React.Component{
 
     render(){
         return (
-            <Form layout="inline" >
+            <Form layout="inline" ref={this.formRef}>
                 {this.initFormList()}
                 <FormItem>
                     <Button type="primary" style={{margin:'0 10px'}} onClick={this.handleFilterSubmit}>查询</Button>
